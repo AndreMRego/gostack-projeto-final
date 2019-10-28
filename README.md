@@ -32,7 +32,13 @@ E para a versão mobile, além de instalar as dependências é necessário execu
 ```
 react-native link react-native-vector-icons
 ```
-Após realizar o link da biblioteca, é só executar:
+e
+
+```
+adb reverse tcp:3333 tcp:3333
+```
+
+Após realizar o link da biblioteca e o adb reverse para carregar as imagens, é só executar:
 
 ```
 yarn android
