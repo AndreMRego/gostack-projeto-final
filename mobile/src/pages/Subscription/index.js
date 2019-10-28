@@ -29,6 +29,13 @@ function Subscription({ isFocused }) {
       const response = await api.delete(`subscriptions/${id}`)
       if (response.status) {
         Alert.alert('Sucesso!', 'Inscrição cancelada com sucesso')
+        
+        const newSubscriptions = [...subscriptions]
+        const subscription = newSubscriptions.findIndex(s => s.id === id)
+        if (subscription >= 0) {
+          newSubscriptions.splice(subscription, 1)
+          setSubscriptions(newSubscriptions)
+        }
       }
     } catch (error) {
       Alert.alert(
