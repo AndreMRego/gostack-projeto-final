@@ -1,4 +1,4 @@
-# gostack-projeto-final
+# Projeto Final
 
 **Instalação**
 
