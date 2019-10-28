@@ -15,7 +15,7 @@ import {
   LinkText,
 } from './styles'
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
   const dispatch = useDispatch()
   const emailRef = useRef()
   const passwordRef = useRef()
