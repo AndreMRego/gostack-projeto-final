@@ -24,6 +24,11 @@ class SubscriptionController {
           },
           include: [
             {
+              model: User,
+              as: 'user',
+              attributes: ['id', 'name', 'email'],
+            },
+            {
               model: File,
               as: 'banner',
               attributes: ['id', 'name', 'path', 'url'],
